@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #a1c4fd 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  color: #333;
+}
+
+#confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.screen {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+/* Gift Box Animation */
+.gift-box {
+  text-align: center;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
+.lid {
+  width: 140px;
+  height: 30px;
+  background: #ff477e;
+  border-radius: 6px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  position: relative;
+}
+
+.lid::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 100%;
+  background: #ffd166;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.box {
+  width: 120px;
+  height: 100px;
+  background: #ff5c8a;
+  margin: 0 auto;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.box::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 100%;
+  background: #ffd166;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tap-text {
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Main Card */
+.card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  max-width: 600px;
+  width: 90%;
+  margin: 20px auto;
+  padding: 40px 30px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  animation: popIn 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.title {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  color: #ff477e;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.message-box {
+  background: #fff0f5;
+  padding: 20px;
+  border-radius: 16px;
+  border-left: 5px solid #ff477e;
+  text-align: left;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.signature {
+  margin-top: 12px;
+  font-weight: 700;
+  text-align: right;
+  color: #ff477e;
+}
+
+/* Memories Section */
+.memories h3 {
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.photo-placeholder {
+  background: #f3f4f6;
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* Button */
+.btn {
+  background: linear-gradient(45deg, #ff477e, #ff85a1);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(255, 71, 126, 0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(255, 71, 126, 0.45);
+}
+
+.btn:active {
+  transform: scale(0.96);
+}

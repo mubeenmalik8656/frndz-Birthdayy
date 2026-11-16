@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday!</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Intro Screen -->
+  <div id="intro-screen" class="screen active">
+    <div class="gift-box" id="open-btn">
+      <div class="lid"></div>
+      <div class="box"></div>
+      <p class="tap-text">Tap the gift to open! 🎁</p>
+    </div>
+  </div>
+
+  <!-- Main Birthday Card -->
+  <main id="main-content" class="screen hidden">
+    <div class="card">
+      <h1 class="title">Happy Birthday, <span id="friend-name">[Friend's Name]</span>! 🎉</h1>
+      <p class="subtitle">Wishing you the most amazing year ahead.</p>
+
+      <div class="message-box">
+        <p>
+          To one of the best people I know—thank you for all the laughs, late-night talks, 
+          and unforgettable memories. May this year bring you endless happiness, success, 
+          and everything you’ve been wishing for!
+        </p>
+        <p class="signature">— Your Best Friend ❤️</p>
+      </div>
+
+      <!-- Optional Memory Gallery -->
+      <div class="memories">
+        <h3>Favorite Memories</h3>
+        <div class="photo-grid">
+          <div class="photo-placeholder">📸 Add Photo 1</div>
+          <div class="photo-placeholder">📸 Add Photo 2</div>
+          <div class="photo-placeholder">📸 Add Photo 3</div>
+        </div>
+      </div>
+
+      <button id="celebrate-btn" class="btn">Throw More Confetti! 🎊</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
